@@ -30,7 +30,7 @@ router.get('/:id', (req, res) => {
       }
     });
 
-    if (!locationData) {
+    if (!findOneCategory) {
       res.status(404).json({ message: 'No category found with this id!' });
       return;
     }
@@ -66,7 +66,7 @@ router.put('/:id', (req, res) => {
       }
     });
 
-    if (!locationData) {
+    if (!updateCatbyId) {
       res.status(404).json({ message: 'No Category found with this id!' });
       return;
     }
@@ -87,7 +87,7 @@ router.delete('/:id', (req, res) => {
       }
     });
 
-    if (!locationData) {
+    if (!deleteCatbyID) {
       res.status(404).json({ message: 'No Category found with this id!' });
       return;
     }
